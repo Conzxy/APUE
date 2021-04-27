@@ -3,7 +3,7 @@
 ```cpp
 #include <fcntl.h>
 
-int create(const char* path,mode_t mode);
+int creat(const char* path,mode_t mode);
 
 //return:fd opened for write-only if OK,-1 on error
 ```
