@@ -14,17 +14,4 @@
 | stdout             | 1               | STDOUT_FILENO       |
 | stderr             | 2               | STDERR_FILENO       |
 
-## API
 
-* open
-* create
-* close
-* lseek
-* read/write
-
-原子操作：
-
-* pread/pwrite
-* dup/dup2
-
-* fcntl
