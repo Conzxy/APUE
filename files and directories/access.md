@@ -17,6 +17,9 @@ int faccessat(int fd,char const* restrict pathname,int mode,int flag)
 |X_OK|test for execute permission|
 
 `faccessat`参数：
-* fd为AT_FDCWD且pathname为相对路径或pathname为绝对路径（即使AT_FDCWD被指定）时，行为同access。否则评估pathname为打开目录（fd指向的）的相对目录
+* fd为AT_FDCWD时，
+  * pathname为相对路径，则为当前目录的相对路径
+  * pathname为绝对路径，忽略fd，行为同access
+* fd指定其他，pathname为打开目录（fd指向的）的相对路径
 * flag为AT_EACCESS(effective access)时，访问检验将使用effective ID，而不是real ID
 

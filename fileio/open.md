@@ -10,12 +10,12 @@ int openat(int fd,const char* path,int oflags,mode_t mode);
 //return:fd if OK,-1 on error
 ```
 
-| oflags   | effect                              |
-| -------- | ----------------------------------- |
-| O_RDONLY | read only                           |
-| O_WRONLY | write only                          |
-| O_RDWR   | read and write                      |
-| O_EXEC   | execute only                        |
+| oflags   | description  |
+| -------- | --------|
+| O_RDONLY | read only   |
+| O_WRONLY | write only   |
+| O_RDWR   | read and write    |
+| O_EXEC   | execute only    |
 | O_SEARCH | search only(applies to directories) |
 
 这五个只能有一个被指定（它们并不是按bit分开来的，因此O_RDONLY|O_WRONLY=O_RDWR不成立）
@@ -49,4 +49,15 @@ int openat(int fd,const char* path,int oflags,mode_t mode);
 
 * 如果path是绝对路径，则两者行为一致
 * 如果path是相对路径
+
+## 习惯问题
+不要这么写：
+```cpp
+int fd;
+if(fd=open(pathname,oflags) < 0)   //wrong
+//< 的优先级高于=，所以fd为0或1
+//---
+int fd=open(pathname,oflags);
+if(fd < 0)          //good
+```
 

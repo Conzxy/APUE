@@ -9,6 +9,7 @@ int creat(const char* path,mode_t mode);
 ```
 
 > 等价于open(path,O_WRONLY|O_CREAT|O_TRUNC,mode)
+
 > 注意不是create而是`creat`！
 
 # close
