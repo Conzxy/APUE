@@ -1,6 +1,9 @@
 # 文件访问权限
-|st_mode mask|meaning|
+|st_mode mask|description|
 |------------|-------|
+|S_ISUID    |set-user-ID|
+|S_ISGID    |set-group-ID|
+|S_ISVTX    |sticky bit|
 |S_IRUSR    |user-read|
 |S_IWUSR    |user-write|
 |S_IXUSR    |user-execute|
