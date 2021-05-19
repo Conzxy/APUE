@@ -51,6 +51,7 @@ int openat(int fd,const char* path,int oflags,mode_t mode);
 * 如果path是相对路径
 
 ## 习惯问题
+
 不要这么写：
 ```cpp
 int fd;
