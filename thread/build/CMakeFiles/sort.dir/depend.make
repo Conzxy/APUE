@@ -15,4 +15,5 @@ CMakeFiles/sort.dir/sort.cc.o: ../mythread/mutexlock.h
 CMakeFiles/sort.dir/sort.cc.o: ../mythread/pthreadM.h
 CMakeFiles/sort.dir/sort.cc.o: ../mythread/thread.h
 CMakeFiles/sort.dir/sort.cc.o: ../sort.cc
+CMakeFiles/sort.dir/sort.cc.o: ../sort.h
 
