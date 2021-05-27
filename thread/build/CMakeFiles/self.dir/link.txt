@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -pthread   CMakeFiles/self.dir/self.cc.o CMakeFiles/self.dir/mythread/condition.cc.o CMakeFiles/self.dir/mythread/thread.cc.o  -o ../bin/self 

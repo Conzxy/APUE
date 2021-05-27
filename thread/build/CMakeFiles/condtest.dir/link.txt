@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -pthread   CMakeFiles/condtest.dir/condtest.cc.o CMakeFiles/condtest.dir/mythread/condition.cc.o CMakeFiles/condtest.dir/mythread/thread.cc.o  -o ../bin/condtest 

@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/conzxy/apue/APUE/thread/mythread/thread.cc
+thread.h
+/home/conzxy/apue/APUE/thread/mythread/thread.h
+noncopyable.h
+-
+stdio.h
+-
+assert.h
+-
+errorHandle.h
+-
+
+/home/conzxy/apue/APUE/thread/mythread/thread.h
+noncopyable.h
+-
+pthread.h
+-
+functional
+-
+

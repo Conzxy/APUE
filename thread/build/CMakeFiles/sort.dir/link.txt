@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -pthread   CMakeFiles/sort.dir/sort.cc.o CMakeFiles/sort.dir/mythread/condition.cc.o CMakeFiles/sort.dir/mythread/thread.cc.o  -o ../bin/sort 
