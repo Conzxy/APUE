@@ -10,6 +10,8 @@ CMakeFiles/sort.dir/mythread/thread.cc.o: ../mythread/thread.cc
 CMakeFiles/sort.dir/mythread/thread.cc.o: ../mythread/thread.h
 
 CMakeFiles/sort.dir/sort.cc.o: ../common.h
+CMakeFiles/sort.dir/sort.cc.o: ../mythread/atomic.h
+CMakeFiles/sort.dir/sort.cc.o: ../mythread/barrier.h
 CMakeFiles/sort.dir/sort.cc.o: ../mythread/condition.h
 CMakeFiles/sort.dir/sort.cc.o: ../mythread/mutexlock.h
 CMakeFiles/sort.dir/sort.cc.o: ../mythread/pthreadM.h

@@ -4,6 +4,8 @@
 CMakeFiles/hasht.dir/hasht.cc.o: ../common.h
 CMakeFiles/hasht.dir/hasht.cc.o: ../hasht.cc
 CMakeFiles/hasht.dir/hasht.cc.o: ../hasht.h
+CMakeFiles/hasht.dir/hasht.cc.o: ../mythread/atomic.h
+CMakeFiles/hasht.dir/hasht.cc.o: ../mythread/barrier.h
 CMakeFiles/hasht.dir/hasht.cc.o: ../mythread/condition.h
 CMakeFiles/hasht.dir/hasht.cc.o: ../mythread/mutexlock.h
 CMakeFiles/hasht.dir/hasht.cc.o: ../mythread/pthreadM.h

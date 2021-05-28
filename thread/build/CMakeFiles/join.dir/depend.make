@@ -3,6 +3,8 @@
 
 CMakeFiles/join.dir/join.cc.o: ../common.h
 CMakeFiles/join.dir/join.cc.o: ../join.cc
+CMakeFiles/join.dir/join.cc.o: ../mythread/atomic.h
+CMakeFiles/join.dir/join.cc.o: ../mythread/barrier.h
 CMakeFiles/join.dir/join.cc.o: ../mythread/condition.h
 CMakeFiles/join.dir/join.cc.o: ../mythread/mutexlock.h
 CMakeFiles/join.dir/join.cc.o: ../mythread/pthreadM.h

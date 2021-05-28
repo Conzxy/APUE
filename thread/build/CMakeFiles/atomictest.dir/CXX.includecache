@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/home/conzxy/apue/APUE/thread/atomictest.cc
+mythread/atomic.h
+/home/conzxy/apue/APUE/thread/mythread/atomic.h
+common.h
+/home/conzxy/apue/APUE/thread/common.h
+pthread.h
+-
+vector
+-
+
 /home/conzxy/apue/APUE/thread/common.h
 mythread/thread.h
 /home/conzxy/apue/APUE/thread/mythread/thread.h
@@ -17,12 +27,6 @@ mythread/atomic.h
 /home/conzxy/apue/APUE/thread/mythread/atomic.h
 mythread/barrier.h
 /home/conzxy/apue/APUE/thread/mythread/barrier.h
-
-/home/conzxy/apue/APUE/thread/join.cc
-common.h
-/home/conzxy/apue/APUE/thread/common.h
-pthread.h
--
 
 /home/conzxy/apue/APUE/thread/mythread/atomic.h
 type_traits
@@ -39,14 +43,6 @@ pthread.h
 -
 pthreadM.h
 /home/conzxy/apue/APUE/thread/mythread/pthreadM.h
-
-/home/conzxy/apue/APUE/thread/mythread/condition.cc
-condition.h
-/home/conzxy/apue/APUE/thread/mythread/condition.h
-pthread.h
--
-time.h
--
 
 /home/conzxy/apue/APUE/thread/mythread/condition.h
 pthread.h

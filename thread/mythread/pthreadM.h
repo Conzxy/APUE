@@ -9,6 +9,7 @@
 
 #include <stdio.h>
 #include <assert.h>
+#include <string.h>
 #include <errno.h>
 
 constexpr int gErrLine = 256;
@@ -21,6 +22,15 @@ constexpr int gErrLine = 256;
 			   snprintf(buf, gErrLine-1, "Error Message:%s\n", strerror(err));\
 			   fputs(buf, stdout);\
 		   }\
-		   assert(err == 0);	});
+		   assert(err == 0);	})
 
+#define TCHECK2(ret, option) \
+		({ __typeof__(ret) err = ret; \
+		  if(err != 0 && err != option){\
+			char buf[gErrLine];	\
+			snprintf(buf, gErrLine - 1, "Error Message:%s\n", strerror(err)); \
+			fputs(buf, stdout);\
+			assert(err == 0);\
+		  }})
+		  
 #endif

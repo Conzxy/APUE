@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -pthread   CMakeFiles/atomictest.dir/atomictest.cc.o CMakeFiles/atomictest.dir/mythread/condition.cc.o CMakeFiles/atomictest.dir/mythread/thread.cc.o  -o ../bin/atomictest 

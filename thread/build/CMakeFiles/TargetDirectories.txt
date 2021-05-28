@@ -1,6 +1,7 @@
 /home/conzxy/apue/APUE/thread/build/CMakeFiles/rebuild_cache.dir
 /home/conzxy/apue/APUE/thread/build/CMakeFiles/edit_cache.dir
 /home/conzxy/apue/APUE/thread/build/CMakeFiles/sort.dir
+/home/conzxy/apue/APUE/thread/build/CMakeFiles/atomictest.dir
 /home/conzxy/apue/APUE/thread/build/CMakeFiles/mutex_test.dir
 /home/conzxy/apue/APUE/thread/build/CMakeFiles/timeout.dir
 /home/conzxy/apue/APUE/thread/build/CMakeFiles/condtest.dir

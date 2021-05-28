@@ -3,6 +3,8 @@
 
 CMakeFiles/condtest.dir/condtest.cc.o: ../common.h
 CMakeFiles/condtest.dir/condtest.cc.o: ../condtest.cc
+CMakeFiles/condtest.dir/condtest.cc.o: ../mythread/atomic.h
+CMakeFiles/condtest.dir/condtest.cc.o: ../mythread/barrier.h
 CMakeFiles/condtest.dir/condtest.cc.o: ../mythread/condition.h
 CMakeFiles/condtest.dir/condtest.cc.o: ../mythread/mutexlock.h
 CMakeFiles/condtest.dir/condtest.cc.o: ../mythread/pthreadM.h

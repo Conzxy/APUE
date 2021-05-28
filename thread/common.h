@@ -9,7 +9,8 @@
 #include "mythread/thread.h"
 #include "mythread/mutexlock.h"
 #include "mythread/condition.h"
-
+#include "mythread/atomic.h"
+#include "mythread/barrier.h"
 
 #endif
 

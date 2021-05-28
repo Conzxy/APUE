@@ -124,6 +124,19 @@ sort/fast:
 .PHONY : sort/fast
 
 #=============================================================================
+# Target rules for targets named atomictest
+
+# Build rule for target.
+atomictest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 atomictest
+.PHONY : atomictest
+
+# fast build rule for target.
+atomictest/fast:
+	$(MAKE) -f CMakeFiles/atomictest.dir/build.make CMakeFiles/atomictest.dir/build
+.PHONY : atomictest/fast
+
+#=============================================================================
 # Target rules for targets named mutex_test
 
 # Build rule for target.
@@ -200,6 +213,33 @@ join: cmake_check_build_system
 join/fast:
 	$(MAKE) -f CMakeFiles/join.dir/build.make CMakeFiles/join.dir/build
 .PHONY : join/fast
+
+atomictest.o: atomictest.cc.o
+
+.PHONY : atomictest.o
+
+# target to build an object file
+atomictest.cc.o:
+	$(MAKE) -f CMakeFiles/atomictest.dir/build.make CMakeFiles/atomictest.dir/atomictest.cc.o
+.PHONY : atomictest.cc.o
+
+atomictest.i: atomictest.cc.i
+
+.PHONY : atomictest.i
+
+# target to preprocess a source file
+atomictest.cc.i:
+	$(MAKE) -f CMakeFiles/atomictest.dir/build.make CMakeFiles/atomictest.dir/atomictest.cc.i
+.PHONY : atomictest.cc.i
+
+atomictest.s: atomictest.cc.s
+
+.PHONY : atomictest.s
+
+# target to generate assembly for a file
+atomictest.cc.s:
+	$(MAKE) -f CMakeFiles/atomictest.dir/build.make CMakeFiles/atomictest.dir/atomictest.cc.s
+.PHONY : atomictest.cc.s
 
 condtest.o: condtest.cc.o
 
@@ -316,6 +356,7 @@ mythread/condition.o: mythread/condition.cc.o
 # target to build an object file
 mythread/condition.cc.o:
 	$(MAKE) -f CMakeFiles/sort.dir/build.make CMakeFiles/sort.dir/mythread/condition.cc.o
+	$(MAKE) -f CMakeFiles/atomictest.dir/build.make CMakeFiles/atomictest.dir/mythread/condition.cc.o
 	$(MAKE) -f CMakeFiles/mutex_test.dir/build.make CMakeFiles/mutex_test.dir/mythread/condition.cc.o
 	$(MAKE) -f CMakeFiles/timeout.dir/build.make CMakeFiles/timeout.dir/mythread/condition.cc.o
 	$(MAKE) -f CMakeFiles/condtest.dir/build.make CMakeFiles/condtest.dir/mythread/condition.cc.o
@@ -331,6 +372,7 @@ mythread/condition.i: mythread/condition.cc.i
 # target to preprocess a source file
 mythread/condition.cc.i:
 	$(MAKE) -f CMakeFiles/sort.dir/build.make CMakeFiles/sort.dir/mythread/condition.cc.i
+	$(MAKE) -f CMakeFiles/atomictest.dir/build.make CMakeFiles/atomictest.dir/mythread/condition.cc.i
 	$(MAKE) -f CMakeFiles/mutex_test.dir/build.make CMakeFiles/mutex_test.dir/mythread/condition.cc.i
 	$(MAKE) -f CMakeFiles/timeout.dir/build.make CMakeFiles/timeout.dir/mythread/condition.cc.i
 	$(MAKE) -f CMakeFiles/condtest.dir/build.make CMakeFiles/condtest.dir/mythread/condition.cc.i
@@ -346,6 +388,7 @@ mythread/condition.s: mythread/condition.cc.s
 # target to generate assembly for a file
 mythread/condition.cc.s:
 	$(MAKE) -f CMakeFiles/sort.dir/build.make CMakeFiles/sort.dir/mythread/condition.cc.s
+	$(MAKE) -f CMakeFiles/atomictest.dir/build.make CMakeFiles/atomictest.dir/mythread/condition.cc.s
 	$(MAKE) -f CMakeFiles/mutex_test.dir/build.make CMakeFiles/mutex_test.dir/mythread/condition.cc.s
 	$(MAKE) -f CMakeFiles/timeout.dir/build.make CMakeFiles/timeout.dir/mythread/condition.cc.s
 	$(MAKE) -f CMakeFiles/condtest.dir/build.make CMakeFiles/condtest.dir/mythread/condition.cc.s
@@ -361,6 +404,7 @@ mythread/thread.o: mythread/thread.cc.o
 # target to build an object file
 mythread/thread.cc.o:
 	$(MAKE) -f CMakeFiles/sort.dir/build.make CMakeFiles/sort.dir/mythread/thread.cc.o
+	$(MAKE) -f CMakeFiles/atomictest.dir/build.make CMakeFiles/atomictest.dir/mythread/thread.cc.o
 	$(MAKE) -f CMakeFiles/mutex_test.dir/build.make CMakeFiles/mutex_test.dir/mythread/thread.cc.o
 	$(MAKE) -f CMakeFiles/timeout.dir/build.make CMakeFiles/timeout.dir/mythread/thread.cc.o
 	$(MAKE) -f CMakeFiles/condtest.dir/build.make CMakeFiles/condtest.dir/mythread/thread.cc.o
@@ -376,6 +420,7 @@ mythread/thread.i: mythread/thread.cc.i
 # target to preprocess a source file
 mythread/thread.cc.i:
 	$(MAKE) -f CMakeFiles/sort.dir/build.make CMakeFiles/sort.dir/mythread/thread.cc.i
+	$(MAKE) -f CMakeFiles/atomictest.dir/build.make CMakeFiles/atomictest.dir/mythread/thread.cc.i
 	$(MAKE) -f CMakeFiles/mutex_test.dir/build.make CMakeFiles/mutex_test.dir/mythread/thread.cc.i
 	$(MAKE) -f CMakeFiles/timeout.dir/build.make CMakeFiles/timeout.dir/mythread/thread.cc.i
 	$(MAKE) -f CMakeFiles/condtest.dir/build.make CMakeFiles/condtest.dir/mythread/thread.cc.i
@@ -391,6 +436,7 @@ mythread/thread.s: mythread/thread.cc.s
 # target to generate assembly for a file
 mythread/thread.cc.s:
 	$(MAKE) -f CMakeFiles/sort.dir/build.make CMakeFiles/sort.dir/mythread/thread.cc.s
+	$(MAKE) -f CMakeFiles/atomictest.dir/build.make CMakeFiles/atomictest.dir/mythread/thread.cc.s
 	$(MAKE) -f CMakeFiles/mutex_test.dir/build.make CMakeFiles/mutex_test.dir/mythread/thread.cc.s
 	$(MAKE) -f CMakeFiles/timeout.dir/build.make CMakeFiles/timeout.dir/mythread/thread.cc.s
 	$(MAKE) -f CMakeFiles/condtest.dir/build.make CMakeFiles/condtest.dir/mythread/thread.cc.s
@@ -489,12 +535,16 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... sort"
+	@echo "... atomictest"
 	@echo "... mutex_test"
 	@echo "... timeout"
 	@echo "... condtest"
 	@echo "... hasht"
 	@echo "... self"
 	@echo "... join"
+	@echo "... atomictest.o"
+	@echo "... atomictest.i"
+	@echo "... atomictest.s"
 	@echo "... condtest.o"
 	@echo "... condtest.i"
 	@echo "... condtest.s"

@@ -4,6 +4,8 @@
 CMakeFiles/condtest.dir/condtest.cc.o
  /home/conzxy/apue/APUE/thread/common.h
  /home/conzxy/apue/APUE/thread/condtest.cc
+ /home/conzxy/apue/APUE/thread/mythread/atomic.h
+ /home/conzxy/apue/APUE/thread/mythread/barrier.h
  /home/conzxy/apue/APUE/thread/mythread/condition.h
  /home/conzxy/apue/APUE/thread/mythread/mutexlock.h
  /home/conzxy/apue/APUE/thread/mythread/pthreadM.h

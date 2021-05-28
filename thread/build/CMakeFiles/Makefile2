@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/conzxy/apue/APUE/thread/build
 
 # The main recursive "all" target.
 all: CMakeFiles/sort.dir/all
+all: CMakeFiles/atomictest.dir/all
 all: CMakeFiles/mutex_test.dir/all
 all: CMakeFiles/timeout.dir/all
 all: CMakeFiles/condtest.dir/all
@@ -70,6 +71,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/sort.dir/clean
+clean: CMakeFiles/atomictest.dir/clean
 clean: CMakeFiles/mutex_test.dir/clean
 clean: CMakeFiles/timeout.dir/clean
 clean: CMakeFiles/condtest.dir/clean
@@ -86,7 +88,7 @@ clean: CMakeFiles/join.dir/clean
 CMakeFiles/sort.dir/all:
 	$(MAKE) -f CMakeFiles/sort.dir/build.make CMakeFiles/sort.dir/depend
 	$(MAKE) -f CMakeFiles/sort.dir/build.make CMakeFiles/sort.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/conzxy/apue/APUE/thread/build/CMakeFiles --progress-num=21,22,23,24 "Built target sort"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/conzxy/apue/APUE/thread/build/CMakeFiles --progress-num=25,26,27,28 "Built target sort"
 .PHONY : CMakeFiles/sort.dir/all
 
 # Build rule for subdir invocation for target.
@@ -107,13 +109,40 @@ CMakeFiles/sort.dir/clean:
 .PHONY : CMakeFiles/sort.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/atomictest.dir
+
+# All Build rule for target.
+CMakeFiles/atomictest.dir/all:
+	$(MAKE) -f CMakeFiles/atomictest.dir/build.make CMakeFiles/atomictest.dir/depend
+	$(MAKE) -f CMakeFiles/atomictest.dir/build.make CMakeFiles/atomictest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/conzxy/apue/APUE/thread/build/CMakeFiles --progress-num=1,2,3,4 "Built target atomictest"
+.PHONY : CMakeFiles/atomictest.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/atomictest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/conzxy/apue/APUE/thread/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/atomictest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/conzxy/apue/APUE/thread/build/CMakeFiles 0
+.PHONY : CMakeFiles/atomictest.dir/rule
+
+# Convenience name for target.
+atomictest: CMakeFiles/atomictest.dir/rule
+
+.PHONY : atomictest
+
+# clean rule for target.
+CMakeFiles/atomictest.dir/clean:
+	$(MAKE) -f CMakeFiles/atomictest.dir/build.make CMakeFiles/atomictest.dir/clean
+.PHONY : CMakeFiles/atomictest.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/mutex_test.dir
 
 # All Build rule for target.
 CMakeFiles/mutex_test.dir/all:
 	$(MAKE) -f CMakeFiles/mutex_test.dir/build.make CMakeFiles/mutex_test.dir/depend
 	$(MAKE) -f CMakeFiles/mutex_test.dir/build.make CMakeFiles/mutex_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/conzxy/apue/APUE/thread/build/CMakeFiles --progress-num=13,14,15,16 "Built target mutex_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/conzxy/apue/APUE/thread/build/CMakeFiles --progress-num=17,18,19,20 "Built target mutex_test"
 .PHONY : CMakeFiles/mutex_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -140,7 +169,7 @@ CMakeFiles/mutex_test.dir/clean:
 CMakeFiles/timeout.dir/all:
 	$(MAKE) -f CMakeFiles/timeout.dir/build.make CMakeFiles/timeout.dir/depend
 	$(MAKE) -f CMakeFiles/timeout.dir/build.make CMakeFiles/timeout.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/conzxy/apue/APUE/thread/build/CMakeFiles --progress-num=25,26,27,28 "Built target timeout"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/conzxy/apue/APUE/thread/build/CMakeFiles --progress-num=29,30,31,32 "Built target timeout"
 .PHONY : CMakeFiles/timeout.dir/all
 
 # Build rule for subdir invocation for target.
@@ -167,7 +196,7 @@ CMakeFiles/timeout.dir/clean:
 CMakeFiles/condtest.dir/all:
 	$(MAKE) -f CMakeFiles/condtest.dir/build.make CMakeFiles/condtest.dir/depend
 	$(MAKE) -f CMakeFiles/condtest.dir/build.make CMakeFiles/condtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/conzxy/apue/APUE/thread/build/CMakeFiles --progress-num=1,2,3,4 "Built target condtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/conzxy/apue/APUE/thread/build/CMakeFiles --progress-num=5,6,7,8 "Built target condtest"
 .PHONY : CMakeFiles/condtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -194,7 +223,7 @@ CMakeFiles/condtest.dir/clean:
 CMakeFiles/hasht.dir/all:
 	$(MAKE) -f CMakeFiles/hasht.dir/build.make CMakeFiles/hasht.dir/depend
 	$(MAKE) -f CMakeFiles/hasht.dir/build.make CMakeFiles/hasht.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/conzxy/apue/APUE/thread/build/CMakeFiles --progress-num=5,6,7,8 "Built target hasht"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/conzxy/apue/APUE/thread/build/CMakeFiles --progress-num=9,10,11,12 "Built target hasht"
 .PHONY : CMakeFiles/hasht.dir/all
 
 # Build rule for subdir invocation for target.
@@ -221,7 +250,7 @@ CMakeFiles/hasht.dir/clean:
 CMakeFiles/self.dir/all:
 	$(MAKE) -f CMakeFiles/self.dir/build.make CMakeFiles/self.dir/depend
 	$(MAKE) -f CMakeFiles/self.dir/build.make CMakeFiles/self.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/conzxy/apue/APUE/thread/build/CMakeFiles --progress-num=17,18,19,20 "Built target self"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/conzxy/apue/APUE/thread/build/CMakeFiles --progress-num=21,22,23,24 "Built target self"
 .PHONY : CMakeFiles/self.dir/all
 
 # Build rule for subdir invocation for target.
@@ -248,7 +277,7 @@ CMakeFiles/self.dir/clean:
 CMakeFiles/join.dir/all:
 	$(MAKE) -f CMakeFiles/join.dir/build.make CMakeFiles/join.dir/depend
 	$(MAKE) -f CMakeFiles/join.dir/build.make CMakeFiles/join.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/conzxy/apue/APUE/thread/build/CMakeFiles --progress-num=9,10,11,12 "Built target join"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/conzxy/apue/APUE/thread/build/CMakeFiles --progress-num=13,14,15,16 "Built target join"
 .PHONY : CMakeFiles/join.dir/all
 
 # Build rule for subdir invocation for target.

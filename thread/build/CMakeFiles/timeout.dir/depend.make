@@ -10,6 +10,8 @@ CMakeFiles/timeout.dir/mythread/thread.cc.o: ../mythread/thread.cc
 CMakeFiles/timeout.dir/mythread/thread.cc.o: ../mythread/thread.h
 
 CMakeFiles/timeout.dir/timeout.cc.o: ../common.h
+CMakeFiles/timeout.dir/timeout.cc.o: ../mythread/atomic.h
+CMakeFiles/timeout.dir/timeout.cc.o: ../mythread/barrier.h
 CMakeFiles/timeout.dir/timeout.cc.o: ../mythread/condition.h
 CMakeFiles/timeout.dir/timeout.cc.o: ../mythread/mutexlock.h
 CMakeFiles/timeout.dir/timeout.cc.o: ../mythread/pthreadM.h

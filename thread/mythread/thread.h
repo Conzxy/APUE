@@ -18,7 +18,8 @@ public:
 	using Threadfunc = std::function<void()>;
 
 public:
-	Thread(Threadfunc func, std::string const& name);
+	explicit Thread(Threadfunc func, std::string const& name = {});
+	
 	~Thread();
 
 	void start();

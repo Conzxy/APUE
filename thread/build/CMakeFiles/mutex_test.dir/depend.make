@@ -3,6 +3,8 @@
 
 CMakeFiles/mutex_test.dir/mutex_test.cc.o: ../common.h
 CMakeFiles/mutex_test.dir/mutex_test.cc.o: ../mutex_test.cc
+CMakeFiles/mutex_test.dir/mutex_test.cc.o: ../mythread/atomic.h
+CMakeFiles/mutex_test.dir/mutex_test.cc.o: ../mythread/barrier.h
 CMakeFiles/mutex_test.dir/mutex_test.cc.o: ../mythread/condition.h
 CMakeFiles/mutex_test.dir/mutex_test.cc.o: ../mythread/mutexlock.h
 CMakeFiles/mutex_test.dir/mutex_test.cc.o: ../mythread/pthreadM.h
