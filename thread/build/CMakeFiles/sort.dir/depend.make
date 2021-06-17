@@ -18,4 +18,5 @@ CMakeFiles/sort.dir/sort.cc.o: ../mythread/pthreadM.h
 CMakeFiles/sort.dir/sort.cc.o: ../mythread/thread.h
 CMakeFiles/sort.dir/sort.cc.o: ../sort.cc
 CMakeFiles/sort.dir/sort.cc.o: ../sort.h
+CMakeFiles/sort.dir/sort.cc.o: /home/conzxy/zxy/time/measuretime.h
 

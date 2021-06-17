@@ -3,9 +3,11 @@
 #include <assert.h>
 #include <random>
 #include <sys/time.h>
+#include "mythread/mutexlock.h"
 #include "sort.h"
+#include "/home/conzxy/zxy/time/measuretime.h"
 
-#define PRINT_SWITCH 0
+#define PRINT_SWITCH 1
 using namespace zxy;
 using namespace std;
 
@@ -29,7 +31,6 @@ int main()
 {
 	struct timeval beg, end;
 
-
 	std::default_random_engine dre{};
 	std::uniform_int_distribution<int> di(0, 9999);
 	std::uniform_real_distribution<double> dd(0, 9999.0);
@@ -42,40 +43,31 @@ int main()
 	gettimeofday(&beg, NULL);
 	pthread_barrier_init(&b, NULL, gNumThread + 1);
 	
-	for(int i = 0; i != gNumThread; ++i){
-		//auto g = MutexGuard{lock};
-		int idx = i * gNumPerThread;
-		//printf("idx addr: %p\n", &idx);
-		//gIdx = i * gNumPerThread;
+	{
+		MEASURETIMEty(1, "quicksort(mutilthread)",  TimeType::microseconds);
+		for(int i = 0; i != gNumThread; ++i){
+			int idx = i * gNumPerThread;
+			//printf("idx addr: %p\n", &idx);
+			gIdx = i * gNumPerThread;
 
-		Thread thr([idx](){
-						quicksort(nums + idx, nums + idx + gNumPerThread);
-						pthread_barrier_wait(&b);
-					},
-				   "thread");
+			Thread thr([idx](){
+							quicksort(nums + idx, nums + idx + gNumPerThread);
+							pthread_barrier_wait(&b);
+						},
+					   "thread");
 
-		//Thread thr(fun, "thread");
-		thr.setBarriered(true);
-		thr.start();
-		/*pthread_t tid;
-		TCHECK(pthread_create(&tid, NULL, fun2, (void*)&idx));*/
-	}
+			//Thread thr(fun, "thread");
+			thr.setBarriered(true);
+			thr.start();
+		}
 	
-	pthread_barrier_wait(&b);
-	pthread_barrier_destroy(&b);
+		pthread_barrier_wait(&b);
+		pthread_barrier_destroy(&b);
 
-	mymerge<gNumThread>(&*nums, nums + gNumElement, 
-						&*res, res + gNumElement);
+		mymerge<gNumThread>(&*nums, nums + gNumElement, 
+							&*res, res + gNumElement);
+	}	
 	
-	gettimeofday(&end, NULL);
-	
-	constexpr int useconds = 1000000;
-	const auto startusec = beg.tv_sec * useconds + beg.tv_usec;
-	const auto endusec = end.tv_sec * useconds + end.tv_usec;
-
-	const auto time = static_cast<double>(endusec - startusec) / useconds;
-
-	printf("sort total took %.4f\n", time);
 
 #if PRINT_SWITCH
 	for(int i = 0; i <= gNumElement; ++i){
@@ -93,14 +85,18 @@ int main()
 void fun(){
 	//However, if you assign idx to gIdx, other thread maybe enter the critical section
 	//so, the assignment action of gIdx and idx need synchronization
+	lock.lock();
 	int  idx = gIdx;	
+	lock.unlock();
 	printf("idx: %d\n", idx);//note the "idx:...", you can find some idx are same
 	quicksort(nums + idx, nums + idx + gNumPerThread);
 	pthread_barrier_wait(&b);
 }
 
 void* fun2(void* arg_){
+	lock.lock();	
 	int* arg = static_cast<int*>(arg_);
+	lock.unlock();
 	//printf("arg addr: %p\n", arg);
 	int idx = *arg;
 	

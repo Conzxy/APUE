@@ -7,14 +7,8 @@
 #IncludeRegexTransform: 
 
 /home/conzxy/apue/APUE/thread/atomictest.cc
-mythread/atomic.h
-/home/conzxy/apue/APUE/thread/mythread/atomic.h
 common.h
 /home/conzxy/apue/APUE/thread/common.h
-pthread.h
--
-vector
--
 
 /home/conzxy/apue/APUE/thread/common.h
 mythread/thread.h
